@@ -4,11 +4,11 @@ import Item from '../Item/Item'
 const ItemList = ({items}) => {
     console.log(items)
   return (
-    <>
+    <div className='flex container mx-auto justify-between'>
         {
-            items === 0 ? <p>cargando</p> : items.map((items, index)=>(<Item key={index} title={items.title} img={items.img}/> ))  
+            items === 0 ? <p>cargando</p> : items.map((items, index)=>(<Item key={index} id={items.id} title={items.title} img={items.img}/> ))  
         }
-    </>
+    </div>
   )
 }
 

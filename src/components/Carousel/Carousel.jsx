@@ -28,7 +28,7 @@ const Carousel = () => {
             </button>
             {
                 imgCarousel.map((item, index)=>(
-                    <div/*  className={index === slider  ? "opacity-100 ease-in-out duration-500" : "opacity-0 ease-in-out duration-500"} */ key={index}>
+                    <div key={index}>
                         {
                             index === slider && (<img className=' w-full rounded-2xl ease-in-out  transition-opacity duration-500' src={item} alt="/" />)
                         }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { collection, getDocs } from "firebase/firestore"
 import db from "../../services"
 import ItemList from '../ItemList/ItemList'
+import Spinner from '../Spinner/Spinner'
 
 const ItemListContainer = () => {
 
@@ -14,7 +15,7 @@ const ItemListContainer = () => {
                 const col = await getDocs(data)
                 const res = col.docs.map((doc)=>doc={id:doc.id, ...doc.data()})
                 setItems(res)
-                console.log(items)
+                
                 
             } catch (error) {
                 console.log(error)
@@ -30,11 +31,11 @@ const ItemListContainer = () => {
 
 
   return (
-    <>
+    <div className='container mx-auto'>
         {
-            items.length === 0 ? <p>cargando</p> : <ItemList items={items}/>
+            items.length === 0 ? <Spinner/> : <ItemList items={items}/>
         }
-    </>
+    </div>
         
   )
 }
