@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         'banner-color': '#589D80',
         "text-color": "#00120B",
-        "button-card" : "#F7FDB6"
+        "button-card" : "#F7FDB6",
+        "footer": "#5F464B"
       }
     },
   },

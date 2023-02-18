@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from "../../assets/img/logo.svg"
+import CartWidget from '../CartWidget/CartWidget'
 
 const Navbar = () => {
   return (
@@ -20,6 +21,9 @@ const Navbar = () => {
                 </Link>
                 <Link to="/contacto">
                     <button  className='font-semibold text-lg'>CONTACTO</button>
+                </Link>
+                <Link to="/cart">
+                    <CartWidget className="w-96"/>
                 </Link>
             </div>
         </nav>
