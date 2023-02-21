@@ -1,8 +1,11 @@
 import React from 'react'
+import ContactForm from '../components/ContactForm/ContactForm'
 
 const Contacto = () => {
   return (
-    <div className='text-black'>Contacto</div>
+    <div className='min-h-[500px]'>
+      <ContactForm/>
+    </div>
   )
 }
 

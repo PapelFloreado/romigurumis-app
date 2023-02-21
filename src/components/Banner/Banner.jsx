@@ -8,7 +8,7 @@ const Banner = () => {
 
     <div className=''>
         <div className='flex container mx-auto p-6  justify-center  mt-16'>
-            <div className='bg-banner-color p-10 rounded-2xl flex justify-center  basis-3/4 '>
+            <div className='bg-banner-color  shadow-banner-color shadow-2xl p-10 rounded-2xl flex justify-center  basis-3/4 '>
                 <img className='w-2/4' src={img1} alt="" />
                 <div className=' m-10'>
                     <h1 className='text-text-color text-4xl font-bold'>Romigurumis</h1>

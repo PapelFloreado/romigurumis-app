@@ -32,6 +32,7 @@ const ItemListContainer = () => {
 
   return (
     <div className='container mx-auto'>
+      <h2 className='text-center mt-16 text-3xl font-bold uppercase'>Nuestros Productos</h2>
         {
             items.length === 0 ? <Spinner/> : <ItemList items={items}/>
         }

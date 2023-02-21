@@ -66,13 +66,7 @@ button:hover {
   border-color: #00120B;
 
 }
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-button:active {
-  border-bottom: 2px solid #00120B;
-} */
+
 
 @media (prefers-color-scheme: light) {
   :root {
