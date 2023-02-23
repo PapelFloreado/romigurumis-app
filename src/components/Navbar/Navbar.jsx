@@ -2,8 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from "../../assets/img/logo.svg"
 import CartWidget from '../CartWidget/CartWidget'
+import { UserAuth } from '../../context/AuthContext'
 
 const Navbar = () => {
+
+    const { user, logOut } = UserAuth()
+
+    const handleSingOut = ()=>{
+        logOut()
+    }
+
   return (
     
         <nav className='flex justify-between container mx-auto mt-6 border-b-2 border-b-border-nav pb-5'>
@@ -22,6 +30,12 @@ const Navbar = () => {
                 <Link to="/contacto">
                     <button  className='font-semibold text-lg'>CONTACTO</button>
                 </Link>
+                {
+                    user?.displayName ? <button className='font-semibold text-lg' onClick={handleSingOut}>CERRAR SESIÓN</button> : <Link to="/signin">
+                    <button  className='font-semibold text-lg'>INICIAR SESIÓN</button>
+                </Link>
+                }
+                
                 <Link to="/cart">
                     <CartWidget className="w-96"/>
                 </Link>
