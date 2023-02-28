@@ -31,9 +31,22 @@ const Navbar = () => {
                     <button  className='font-semibold text-lg'>CONTACTO</button>
                 </Link>
                 {
-                    user?.displayName ? <button className='font-semibold text-lg' onClick={handleSingOut}>CERRAR SESIÓN</button> : <Link to="/signin">
-                    <button  className='font-semibold text-lg'>INICIAR SESIÓN</button>
-                </Link>
+                    user?.displayName || user?.email ? 
+                    
+                    (
+                    <>
+                    <Link to="/account">
+                        <button  className='font-semibold text-lg'>MI CUENTA</button>
+                    </Link>
+                    <button className='font-semibold text-lg' onClick={handleSingOut}>CERRAR SESIÓN</button>
+                    </>) : 
+        
+                    (<Link to="/signin">
+                        <button  className='font-semibold text-lg'>INICIAR SESIÓN</button>
+                    </Link>)
+                    
+                        
+                    
                 }
                 
                 <Link to="/cart">

@@ -1,5 +1,13 @@
 import { useContext, createContext, useState, useEffect } from "react";
-import { GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import { 
+    GoogleAuthProvider, 
+    signInWithPopup, 
+    signOut, 
+    onAuthStateChanged, 
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+} from "firebase/auth";
+
 import { auth } from "../services/index"
 import { useNavigate } from "react-router-dom";
 
@@ -9,6 +17,16 @@ export const AuthContextProvider = ({children})=>{
 
     const [user, setUser ] = useState({})
     const navigate = useNavigate()
+
+    const createUser = (email, password)=>{
+        return createUserWithEmailAndPassword(auth, email, password)
+        
+       }
+
+    const signIn = (email, password)=>{
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
 
     const googleSingIn = ()=>{
 
@@ -38,6 +56,8 @@ export const AuthContextProvider = ({children})=>{
         <AuthContext.Provider value={{
             googleSingIn,
             logOut,
+            signIn,
+            createUser,
             user
         }}>
             {children}
