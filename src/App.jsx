@@ -13,6 +13,7 @@ import { AuthContextProvider } from "./context/AuthContext"
 import Account from "./pages/Account"
 import Protected from "./components/Protected/Protected"
 import SignUp from "./pages/SignUp"
+import PasswordReset from "./pages/PasswordReset"
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/signin" element={<SignIn/>}/>
             <Route path="/signup" element={<SignUp/>}/>
+            <Route path="/password-reset" element={<PasswordReset/>}/>
             <Route path="/account" element={<Protected><Account/></Protected>}/>
             <Route path="/shop" element={<Shop/>}/>
             <Route path="/shop/item-detail/:id" element={<ItemDetailContainer/>}/>

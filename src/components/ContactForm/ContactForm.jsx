@@ -22,8 +22,8 @@ const ContactForm = () => {
   return (
     <div className='flex flex-col container mx-auto mt-16'>
         <h2 className='text-center text-3xl uppercase font-bold'>Nos interesa tu opinión</h2>
-        <div className='flex container mx-auto  justify-center w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
-            <form ref={form} onSubmit={sendEmail} className='flex flex-col mt-10 items-center mx-auto justify-center w-full' action="">
+        <div className='flex flex-col container mx-auto  justify-center w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
+            <form ref={form} onSubmit={sendEmail} className=' flex flex-col mt-10 items-center mx-auto justify-center w-full' action="">
                 <label className='text-2xl text-center' htmlFor="name">Nombre</label>
                 <input className='bg-white mb-6 w-1/2 text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2'  placeholder='Nombre' type="text" name="name" required/>
                 <label className='text-2xl text-center' htmlFor="lastName">Apellido</label>

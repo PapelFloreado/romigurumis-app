@@ -15,7 +15,7 @@ const Banner = () => {
                     <p className=' text-text-color text-xl mt-6'>Prodoctos artesanales hechos con el corazón.</p>
                     <p className=' text-text-color text-xl'>Si queres saber más de que se trata ingresa aquí.</p>
                     <Link to="/about">
-                        <button className='bg-button-card mt-6 font-bold uppercase'>SABER MÁS</button>
+                        <button className='rounded-xl bg-button-card mt-6 font-bold uppercase'>SABER MÁS</button>
                     </Link>
                 </div>
             </div>

@@ -10,7 +10,7 @@ const Item = ({title,img, id}) => {
         </div>
         <div className='flex justify-center mt-6'>
             <Link to={`/shop/item-detail/${id}`}>
-                <button className='text-xl font-bold'>Conocer más</button>
+                <button className='text-2xl my-6  rounded-xl text-button-card  font-bold  hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8'>Conocer más</button>
             </Link>
         </div>
     </div>

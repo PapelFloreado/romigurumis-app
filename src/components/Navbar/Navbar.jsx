@@ -22,13 +22,13 @@ const Navbar = () => {
             </div>
             <div className=' items-center flex basis-full justify-between '>
                 <Link to="/shop">
-                    <button className='font-semibold text-lg'>TIENDA</button>
+                    <button className='rounded-xl font-semibold text-lg'>TIENDA</button>
                 </Link>
                 <Link to="/about">
-                    <button className='font-semibold text-lg'>SOBRE NOSOTROS</button>
+                    <button className='rounded-xl font-semibold text-lg'>SOBRE NOSOTROS</button>
                 </Link>
                 <Link to="/contacto">
-                    <button  className='font-semibold text-lg'>CONTACTO</button>
+                    <button  className='rounded-xl font-semibold text-lg'>CONTACTO</button>
                 </Link>
                 {
                     user?.displayName || user?.email ? 
@@ -36,13 +36,13 @@ const Navbar = () => {
                     (
                     <>
                     <Link to="/account">
-                        <button  className='font-semibold text-lg'>MI CUENTA</button>
+                        <button  className='rounded-xl font-semibold text-lg'>MI CUENTA</button>
                     </Link>
-                    <button className='font-semibold text-lg' onClick={handleSingOut}>CERRAR SESIÓN</button>
+                    <button className='rounded-xl font-semibold text-lg' onClick={handleSingOut}>CERRAR SESIÓN</button>
                     </>) : 
         
                     (<Link to="/signin">
-                        <button  className='font-semibold text-lg'>INICIAR SESIÓN</button>
+                        <button  className='rounded-xl font-semibold text-lg'>INICIAR SESIÓN</button>
                     </Link>)
                     
                         

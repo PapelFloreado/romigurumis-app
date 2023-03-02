@@ -6,6 +6,7 @@ import {
     onAuthStateChanged, 
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
+    sendPasswordResetEmail,
 } from "firebase/auth";
 
 import { auth } from "../services/index"
@@ -25,6 +26,10 @@ export const AuthContextProvider = ({children})=>{
 
     const signIn = (email, password)=>{
         return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    const passwordReset = (email)=>{
+        return sendPasswordResetEmail(auth, email)
     }
 
 
@@ -57,6 +62,7 @@ export const AuthContextProvider = ({children})=>{
             googleSingIn,
             logOut,
             signIn,
+            passwordReset,
             createUser,
             user
         }}>

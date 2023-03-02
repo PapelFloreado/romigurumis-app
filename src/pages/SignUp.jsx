@@ -51,7 +51,7 @@ const SignUp = () => {
     }
 
   return (
-    <div>
+    <div className='min-h-[400px]'>
       <h2 className='text-center text-2xl uppercase  font-bold mt-16'>Crea tu cuenta para comenzar a comprar</h2>
       <div className='flex flex-col container mx-auto  justify-center w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
         <form onSubmit={handleSubmit} className=' flex flex-col mt-10 items-center mx-auto justify-center w-full' action="">
