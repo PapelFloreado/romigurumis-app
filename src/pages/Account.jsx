@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
 import { UserAuth } from '../context/AuthContext'
 import { getAuth, sendEmailVerification } from "firebase/auth";
-import UserData from '../components/UserData/UserData';
 
 
 const Account = () => {
@@ -21,14 +20,13 @@ const Account = () => {
     
   }, [])
   
+  console.log(user)
 
   
   return (
-    <div className='flex container mx-auto min-h-[430px]'>
-      <h2>hola {user && user.email}</h2>
-      <UserData />
-      <button></button>
-
+    <div className='flex flex-col mt-16 uppercase font-bold container mx-auto min-h-[430px]'>
+      <h2 className='text-center text-3xl'>hola {user && user.email}</h2>
+      
     </div>
   )
 }

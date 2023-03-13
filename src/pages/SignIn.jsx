@@ -20,22 +20,25 @@ const SignIn = () => {
         try {
           setLoading(true)
           await signIn(email, password)
-
+          setLoading(false)
         } catch (error) {
           if (error.code == "auth/wrong-password") {
             setError("Contraseña incorrecta, intenta de nuevo");
+            setLoading(false)
             setTimeout(() => {
               setError("")
             }, 4000);
           
           }else if (error.code == "auth/invalid-email"){
             setError("El email no es válido")
+            setLoading(false)
             setTimeout(() => {
               setError("")
             },4000 );
             
           }else if (error.code == "auth/too-many-requests"){
             setError("La cuenta ha sido bloqueada temporalmente, reestablece tu contraseña")
+            setLoading(false)
             setTimeout(() => {
               setError("")
             },4000 );
@@ -45,8 +48,8 @@ const SignIn = () => {
     }
 
     const handleGoogleSingIn = async()=>{
-        await googleSingIn()
       try {
+        await googleSingIn()
         
       } catch (error) {
         

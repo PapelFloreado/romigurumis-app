@@ -20,8 +20,7 @@ export const AuthContextProvider = ({children})=>{
     const navigate = useNavigate()
 
     const createUser = (email, password)=>{
-        return createUserWithEmailAndPassword(auth, email, password)
-        
+        return createUserWithEmailAndPassword(auth, email, password) 
        }
 
     const signIn = (email, password)=>{

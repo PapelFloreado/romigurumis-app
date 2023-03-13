@@ -10,6 +10,7 @@ const SignUp = () => {
     const [ password, setPassword ] = useState("")
     const [ error, setError ] = useState("")
     const navigate = useNavigate()
+
     const { createUser } = UserAuth()
     
 
@@ -19,11 +20,11 @@ const SignUp = () => {
         setError("")
         try {
           await createUser(email, password)
-          
+  
           navigate("/account")
           
         } catch (error) {
-          if (error.code == "auth/wrong-password") {
+          if (error.code == "auth/email-already-in-use") {
             setError("Este email ya se encuentra en uso");
             setTimeout(() => {
               setError("")
@@ -45,6 +46,8 @@ const SignUp = () => {
             setTimeout(() => {
               setError("")
             }, 4000);
+          } else if(error){
+            console.log(error.message)
           }
         }
 
