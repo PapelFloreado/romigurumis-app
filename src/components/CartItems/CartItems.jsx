@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { GlobalContext } from '../../context/CartContext'
@@ -36,16 +35,13 @@ const CartItems = () => {
             <div>
                 <FormCart/>
             </div>
-            <div className=' mt-48 flex container mx-auto items-center justify-around  w-1/2'>
+            <div className=' mt-28 flex container mx-auto items-center justify-around  w-1/2'>
                 <Link to="/shop">
                     <button className='rounded-xl text-2xl mx-6  text-button-card  font-bold   hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8'>Volver a la Tienda</button>
                 </Link>
-                <button className='rounded-xl text-2xl mx-6  text-button-card  font-bold   hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8' onClick={clear}>Vaciar Carrito</button>
-                <button className='rounded-xl text-2xl mx-6  text-button-card  font-bold   hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8' 
-                onClick={()=>{
-                    axios.post("http://localhost:3001/payment", carrito).then(res=>window.location.href = res.data.response.body.init_point)
-                }}>Terminar Compra</button>
                 <p className='uppercase text-3xl font-bold'>Precio Final: ${precioFinal} </p>
+                <button className='rounded-xl text-2xl mx-6  text-button-card  font-bold   hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8' onClick={clear}>Vaciar Carrito</button>
+                
             </div>
         </div>
         }
