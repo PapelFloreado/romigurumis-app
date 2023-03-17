@@ -30,7 +30,7 @@ const ItemCount = ({stock, initial=1, onAdd}) => {
             <button onClick={()=>onAdd(count)} className='my-3 border-black rounded-xl hover:bg-banner-color   bg-text-button-card text-2xl transition-colors ease-in-out duration-300 font-bold font-banner-color px-8'>Agregrar al carrito</button>
         </div>
     </>
-  )
+  ) 
 }
 
 export default ItemCount

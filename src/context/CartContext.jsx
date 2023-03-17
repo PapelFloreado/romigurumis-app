@@ -8,6 +8,7 @@ const CartContext = ({children}) => {
 
 
     const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem("carrito"))||[])
+    
 
 
 
@@ -17,6 +18,8 @@ const CartContext = ({children}) => {
     
 
     const addItem = (item, quantity)=>{
+
+        
         
         if(isInCart(item.id)){
             
@@ -24,6 +27,7 @@ const CartContext = ({children}) => {
             let itemIndex = aux.findIndex(element=> element.id === item.id)
             aux[itemIndex]["quantity"] += quantity 
             setCarrito([...aux])
+            
     
         }else{
             const nuevoItem = {...item, quantity}

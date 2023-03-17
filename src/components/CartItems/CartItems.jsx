@@ -23,7 +23,7 @@ const CartItems = () => {
 
             {
                 carrito.map((producto, index)=>(
-                    <div className='flex basis-full w-3/4 justify-between items-center container mx-auto' key={index}>
+                    <div className='flex basis-full mb-6 w-3/4 justify-between items-center container mx-auto' key={index}>
                         <img className=' w-40 rounded-xl shadow-xl' src={producto.img} alt={producto.title} />
                         <p className='basis-1/4 text-2xl mx-6 uppercase font-bold'>{producto.title}</p>
                         <p className='text-xl mx-6 uppercase font-bold'>Cantidad: {producto.quantity}</p>
