@@ -23,8 +23,8 @@ const Carousel = () => {
   return (
     <>
         <div className='mt-10 w-full justify-center items-center '>
-            <button className='border-none' onClick={handleSlidePrev}>
-                <BsFillArrowLeftCircleFill className="absolute top-[75%] text-black left-16 text-4xl cursor-pointer"/>
+            <button className='border-none ' onClick={handleSlidePrev}>
+                <BsFillArrowLeftCircleFill className="absolute top-[40%] md:top-[75%] text-black left-16 text-4xl cursor-pointer"/>
             </button>
             {
                 imgCarousel.map((item, index)=>(
@@ -36,7 +36,7 @@ const Carousel = () => {
                 ))
             }
             <button className='border-none' onClick={handleSlideNext}>
-                <BsFillArrowRightCircleFill className="absolute top-[75%] text-black right-16 text-4xl cursor-pointer "/>
+                <BsFillArrowRightCircleFill className="absolute top-[40%] md:top-[75%] text-black right-16 text-4xl cursor-pointer "/>
             </button>
         </div>   
     </>

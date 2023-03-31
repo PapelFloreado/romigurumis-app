@@ -17,10 +17,10 @@ const CarouselProductos = (img_carousel) => {
     <>
         <div className=" mx-20">
             <div className=" container mx-auto flex basis-1/3 justify-center ">
-                <img className="rounded-xl shadow-2xl" src={img} alt="" />
+                <img className="rounded-xl shadow-2xl w-2/3" src={img} alt="" />
             </div>
             <div className=" flex justify-center">
-                <div className=" flex w-3/5 mt-6 ">
+                <div className=" flex w-4/5 md:w-4/5 mt-6 ">
                     {
                         img_carousel.img_carousel.map((item, index)=>(
                           <div className="mx-2" key={index}>

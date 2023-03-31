@@ -7,10 +7,10 @@ const Banner = () => {
   return (
 
     <div className=''>
-        <div className='flex container mx-auto p-6  justify-center  mt-16'>
-            <div className='bg-banner-color  shadow-banner-color shadow-2xl p-10 rounded-2xl flex justify-center  basis-3/4 '>
-                <img className='w-2/4' src={img1} alt="" />
-                <div className=' m-10'>
+        <div className='md:flex container mx-auto p-6  justify-center  mt-16'>
+            <div className='bg-banner-color  shadow-banner-color shadow-2xl p-10 rounded-2xl md:flex justify-center  basis-3/4 '>
+                <img className='md:w-2/4' src={img1} alt="" />
+                <div className='flex-col md:flex md:items-center md:justify-center text-center m-10'>
                     <h1 className='text-text-color text-4xl font-bold'>Romigurumis</h1>
                     <p className=' text-text-color text-xl mt-6'>Prodoctos artesanales hechos con el corazón.</p>
                     <p className=' text-text-color text-xl'>Si queres saber más de que se trata ingresa aquí.</p>
