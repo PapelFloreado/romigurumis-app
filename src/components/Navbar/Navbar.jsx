@@ -21,8 +21,8 @@ const Navbar = () => {
 
   return (
     
-        <nav className='flex justify-between container mx-auto mt-6 border-b-2 border-b-border-nav pb-5'>
-            <div>
+        <nav className='flex justify-between container px-6 mx-auto mt-6 border-b-2 border-b-border-nav pb-5'>
+            <div className=''>
                 <Link to="/">
                     <img src={logo} className="w-2/4 md:w-3/4" alt="logo de romigurumis" />
                 </Link>
@@ -60,6 +60,11 @@ const Navbar = () => {
                     <CartWidget className="w-96"/>
                 </Link>
                 
+            </div>
+            <div className="md:hidden flex items-center">
+                <Link to="/cart">
+                        <CartWidget className="w-96"/>
+                </Link>
             </div>
             <div onClick={handleNav} className='items-center md:hidden flex'>
                 {
@@ -107,9 +112,7 @@ const Navbar = () => {
                     </Link>)
   
                 }
-                <Link to="/cart">
-                    <CartWidget className="w-96"/>
-                </Link>
+                
                 
             </ul>
         </nav>

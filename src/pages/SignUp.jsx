@@ -55,14 +55,14 @@ const SignUp = () => {
 
   return (
     <div className='min-h-[400px]'>
-      <h2 className='text-center text-2xl uppercase  font-bold mt-16'>Crea tu cuenta para comenzar a comprar</h2>
-      <div className='flex flex-col container mx-auto  justify-center w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
+      <h2 className='text-center text-xl md:text-2xl uppercase  font-bold mt-16'>Crea tu cuenta para comenzar a comprar</h2>
+      <div className='flex flex-col items-center container mx-auto  justify-center md:w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
         <form onSubmit={handleSubmit} className=' flex flex-col mt-10 items-center mx-auto justify-center w-full' action="">
-          <label className='text-2xl' htmlFor="userSingUp">Email</label>
+          <label className='text-xl md:text-2xl' htmlFor="userSingUp">Email</label>
           <input onChange={e=>setEmail(e.target.value)} className='bg-white w-2/4 mb-6 text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2' type="text" name="userSingUp" />
-          <label className='text-2xl' htmlFor="passSingUp">Contraseña</label>
+          <label className='text-xl md:text-2xl' htmlFor="passSingUp">Contraseña</label>
           <input onChange={e=>setPassword(e.target.value)} className='bg-white w-2/4 mb-6 text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2' type="password" name="passSingUp"  />
-          <button className='text-2xl my-6 w-2/4 rounded-xl text-button-card  font-bold  hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8'>Crear Cuenta</button>
+          <button className='text-xl md:text-2xl my-6 w-2/4 rounded-xl text-button-card  font-bold  hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8'>Crear Cuenta</button>
         </form>
         <div className='flex container mx-auto mb-6 '>
 

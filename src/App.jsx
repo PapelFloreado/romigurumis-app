@@ -14,6 +14,7 @@ import Account from "./pages/Account"
 import Protected from "./components/Protected/Protected"
 import SignUp from "./pages/SignUp"
 import PasswordReset from "./pages/PasswordReset"
+import Success from "./pages/Success"
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/password-reset" element={<PasswordReset/>}/>
             <Route path="/account" element={<Protected><Account/></Protected>}/>
+            <Route path="/success" element={<Protected><Success/></Protected>}/>
             <Route path="/shop" element={<Shop/>}/>
             <Route path="/shop/item-detail/:id" element={<ItemDetailContainer/>}/>
             <Route path="/about" element={<About/>}/>

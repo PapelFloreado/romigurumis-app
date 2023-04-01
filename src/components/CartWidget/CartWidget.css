@@ -2,3 +2,10 @@
     width: 2.5em;
     height: 2.5em;
 }
+
+@media screen and (max-width: 750px){
+    .widget{
+        width: 1.8em;
+        height: 1.8em;
+    }
+}

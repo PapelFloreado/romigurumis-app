@@ -39,12 +39,12 @@ const PasswordReset = () => {
     }
   return (
     <div className='min-h-[470px]'>
-        <h2 className='text-center text-3xl uppercase font-bold mt-16'>Reestablece tu contraseña</h2>
-        <div className='flex flex-col container mx-auto  justify-center w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
+        <h2 className='text-center text-2xl md:text-3xl uppercase font-bold mt-16'>Reestablece tu contraseña</h2>
+        <div className='flex flex-col container mx-auto  justify-center  md:w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
         <form className=' flex flex-col mt-10 items-center mx-auto justify-center w-full' action="">
-            <label className='text-2xl' htmlFor="user">Email</label>
-            <input onChange={e=>setEmail(e.target.value)} className='bg-white mb-6 w-1/2 text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2' placeholder='Email' type="text" name="email" id="" />
-            <button onClick={handleReset} className='text-2xl my-6 w-2/4 rounded-xl text-button-card  font-bold  hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8'>Resetear Password</button>  
+            <label className='text-xl md:text-2xl' htmlFor="user">Email</label>
+            <input onChange={e=>setEmail(e.target.value)} className='bg-white mb-6 w-1/2 text-xl md:text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2' placeholder='Email' type="text" name="email" id="" />
+            <button onClick={handleReset} className='text-xl md:text-2xl my-6 w-2/4 rounded-xl text-button-card  font-bold  hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8'>Resetear Password</button>  
             <div className='flex container mx-auto mb-6 '>
             {loading === true ? <Spinner className="min-h-[50px]"/> : <div></div>}
                 {success && 

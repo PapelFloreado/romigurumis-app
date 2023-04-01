@@ -65,25 +65,25 @@ const SignIn = () => {
 
   return (
     <div>
-      <h2 className='text-center text-3xl uppercase font-bold mt-16'>Inicia Sesión</h2>
-      <div className='flex flex-col container mx-auto  justify-center w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
+      <h2 className='text-center text-2xl md:text-3xl uppercase font-bold mt-16'>Inicia Sesión</h2>
+      <div className='flex flex-col container mx-auto  justify-center md:w-1/3 mt-16 shadow-2xl shadow-banner-color rounded-xl'>
         <form className=' flex flex-col mt-10 items-center mx-auto justify-center w-full' action="">
-          <label className='text-2xl' htmlFor="user">Email</label>
-          <input onChange={e=>setEmail(e.target.value)} className='bg-white mb-6 w-1/2 text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2' placeholder='Email' type="text" name="email" required/>
-          <label className='text-2xl' htmlFor="pass">Contraseña</label>
-          <input onChange={e=>setPassword(e.target.value)} className='bg-white w-2/4 mb-6 text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2' placeholder='Contraseña' type="password" name="pass" required />
+          <label className='text-xl md:text-2xl' htmlFor="user">Email</label>
+          <input onChange={e=>setEmail(e.target.value)} className='bg-white mb-6 w-1/2 text-xl md:text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2' placeholder='Email' type="text" name="email" required/>
+          <label className='text-xl md:text-2xl' htmlFor="pass">Contraseña</label>
+          <input onChange={e=>setPassword(e.target.value)} className='bg-white w-2/4 mb-6 text-xl md:text-2xl  border-solid  border-slate-700 border-2 rounded-xl p-2' placeholder='Contraseña' type="password" name="pass" required />
           <button onClick={handleSignIn} className='text-2xl my-6 w-2/4 rounded-xl text-button-card  font-bold  hover:bg-emerald-800 ease-in-out transition-colors duration-300 bg-banner-color px-8'>Iniciar Sesión</button>
           <div className='flex container mx-auto mb-6 '>
               {error && <Alert error={error}/>}
           </div>
           {loading === true ? <Spinner className="min-h-[50px]"/> : <div></div>}
-            <p className='text-xl text-center my-4'>¿Olvidaste tu contraseña? Haz <Link className='underline' to='/password-reset'>click aquí </Link> .</p>
+            <p className='text-lg md:text-xl text-center my-4'>¿Olvidaste tu contraseña? Haz <Link className='underline' to='/password-reset'>click aquí </Link> .</p>
         </form>
-        <p className='text-xl text-center mt-10'>También puedes logguearte con:</p>
+        <p className='text-lg md:text-xl text-center mt-10'>También puedes logguearte con:</p>
       <div className='flex container w-2/4 mx-auto justify-center mt-6'>
         <GoogleButton onClick={handleGoogleSingIn}/>
       </div>
-          <p className='text-xl text-center my-16'>¿No tienes una cuenta? Crea una, haz <Link className='underline' to='/signup'>click aquí </Link> .</p>
+          <p className='text-lg md:text-xl text-center my-16'>¿No tienes una cuenta? Crea una, haz <Link className='underline' to='/signup'>click aquí </Link> .</p>
       </div>
     </div>
   )
